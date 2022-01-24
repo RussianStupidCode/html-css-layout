@@ -111,6 +111,10 @@ a {
     color: #FFF;
 }
 
+.main-header .navbar a:hover {
+    text-decoration: underline;
+}
+
 .main-header .logo {
     width: 10.7vw;
     /*background-color: blue;*/
@@ -121,6 +125,9 @@ main {
 }
 
 main .trends {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0; 
     color: #000;
     text-align: center;
@@ -130,25 +137,25 @@ main .trends {
 
 main .trends .title {
     position: relative;
-    height: 7.4vw;
     padding: 0;
+    margin-top: 4%;
+    margin-bottom: 2%;
 }
 
-main .trends h2 {
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 13.8vw/2);
+.title h2 {
     margin: 0;
     padding: 0;
     line-height: 1.2em;
     font-size: 1.2vw;
     display: inline-block;
+    color: #000;
+    text-transform: uppercase;
 }
 
-main .trends h2::after {
+.title h2::after {
     display: block;
     margin: 0 auto;
-    margin-top: 0.7vw;
+    margin-top: 0.5em;
     content: "";
     width: 4vw;
     height: 0.2vw;
@@ -176,6 +183,18 @@ main .trends .post {
     flex-direction: column;
     justify-content: space-between;
     margin-right: 0.2%;
+}
+
+main .trends .post ul a:hover {
+    text-decoration: underline;
+}
+
+main .trends .post h3 a {
+    color: #FFF;
+}
+
+main .trends .post h3 a:hover {
+    color: #b59f5b;
 }
 
 main .trends .post:last-child {
@@ -265,8 +284,6 @@ main .trends .post h3 {
     padding: 0;
 }
 
-
-
 main > .center-wrapper {
     display: flex;
     background-color: #FFF;
@@ -274,22 +291,17 @@ main > .center-wrapper {
     padding-bottom: 0;
     margin-top: 3.8vw;
     margin-bottom: 3.8vw;
+    justify-content: space-between;
 }
 
 main > .center-wrapper > .posts {
     padding: 0;
     margin: 0;
-    margin-right: 10%;
-    width: 65%;
+    min-width: 65%;
+    margin-right: 11%;
 }
 
-
-main > .center-wrapper aside {
-    padding: 0;
-    margin: 0;
-}
-
-main > .center-wrapper > .posts .post {
+main > .center-wrapper > section.posts .post {
     display: flex;
     justify-content: space-between;
     height: 18vw;
@@ -298,13 +310,13 @@ main > .center-wrapper > .posts .post {
     margin-bottom: 8%;
 }
 
-main > .center-wrapper > .posts .post-info {
+main > .center-wrapper > section.posts .post-info {
     padding: 0;
     margin: 0;
     margin-top: -0.5%;
 }
 
-main > .center-wrapper > .posts .post-title {
+main > .center-wrapper > section.posts .post-title {
     padding: 0;
     margin: 0;
     font-size: 1.2vw;
@@ -316,9 +328,10 @@ main > .center-wrapper > .posts .post-title {
     color: black;
 }
 
-main > .center-wrapper > .posts img {
+main > .center-wrapper > section.posts img {
     margin-right: 3%;
     width: 46%;
+    min-width: 46%;
     background-color: #eff6f1;
 }
 
@@ -335,7 +348,7 @@ main > .center-wrapper > .posts img {
     font-weight: bold;
 }
 
-main > .center-wrapper > .posts .post-description {
+main > .center-wrapper > section.posts .post-description {
     font-family: "Open Sans";
     padding: 0;
     margin-top: 10%;
@@ -344,3 +357,148 @@ main > .center-wrapper > .posts .post-description {
     color: #000;
 }
 
+
+main aside {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 17vw;
+}
+
+.sidebar .new-posts {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .sidebar .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-left: 8%;
+}
+
+main .sidebar h2 {
+    font-size: 0.8vw;
+    line-height: 1.5em;
+}
+
+main .sidebar h3 {
+    margin: 0;
+    bottom: 0;
+    font-size: 0.8vw;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+
+main .sidebar .publish-date {
+    margin: 0;
+}
+
+main .sidebar .post {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    height: 4.3vw;
+    font-size: 0.8vw;
+    margin-bottom: 7%;
+}
+
+main .sidebar img {
+    margin: 0;
+    display: flex;
+    height: auto;
+    margin-right: 7%;
+    min-width: 30%;
+}
+
+main .sidebar .post-info {
+    margin: 0;
+    padding: 0;
+    margin-top: -5%;
+}
+
+main .sidebar .search-form {
+    display: flex;
+    width: 100%;
+}
+
+main .sidebar button {
+    font-family: "Open Sans";
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    margin-top: auto;
+    background-color: #b59f5b;
+    width: 20%;
+    height: 2.5vw;
+    background-image: url("../svg/search.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: left 50% center;
+}
+
+main .sidebar input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin: 0;
+    width: 100%;
+    font-size: 0.8vw;
+    line-height: 3em;
+    background-color: #f4f7f6;
+    border: none;
+    font-family: "Open Sans";
+    color: #9b9c9c;
+    padding-left: 6%;
+}
+
+main .sidebar input:focus {
+    outline: none;
+}
+
+main .sidebar .submit-form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .sidebar .flex-container {
+    margin-top: 15%;
+}
+
+main .sidebar .submit-form header {
+    margin-bottom: 8%;
+}
+
+main .sidebar .submit-form form {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+main .sidebar .submit-form button {
+    margin-top: 7%;
+    width: 100%;
+    background-image: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8vw;
+    line-height: 3.5em;
+    color: #FFF;
+}
