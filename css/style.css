@@ -328,6 +328,14 @@ main > .center-wrapper > section.posts .post-title {
     color: black;
 }
 
+main > .center-wrapper > section.posts .post-title a:hover {
+    color: #b59f5b;
+}
+
+main > .center-wrapper > section.posts .category a:hover {
+    text-decoration: underline;
+}
+
 main > .center-wrapper > section.posts img {
     margin-right: 3%;
     width: 46%;
@@ -441,11 +449,15 @@ main .sidebar button {
     margin-top: auto;
     background-color: #b59f5b;
     width: 20%;
-    height: 2.5vw;
+    height: 3.1vw;
     background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: left 50% center;
+}
+
+main .sidebar button:hover {
+    background-color: black;
 }
 
 main .sidebar input {
@@ -456,7 +468,7 @@ main .sidebar input {
     margin: 0;
     width: 100%;
     font-size: 0.8vw;
-    line-height: 3em;
+    line-height: 3.5em;
     background-color: #f4f7f6;
     border: none;
     font-family: "Open Sans";
@@ -464,9 +476,10 @@ main .sidebar input {
     padding-left: 6%;
 }
 
-main .sidebar input:focus {
-    outline: none;
+main .sidebar input:hover {
+    outline: 0.02vw solid #b59f5b;
 }
+
 
 main .sidebar .submit-form {
     margin: 0;
@@ -479,16 +492,25 @@ main .sidebar .submit-form {
 }
 
 main .sidebar .flex-container {
-    margin-top: 15%;
+    margin: 0;
+    margin-top: 17%;
+    width: 100%;
 }
 
-main .sidebar .submit-form header {
+main .sidebar .flex-container header {
     margin-bottom: 8%;
+    margin-right: 10%;
 }
+
 
 main .sidebar .submit-form form {
     width: 100%;
-    overflow: hidden;
+}
+
+main .sidebar .submit-form input {
+    margin-top: 2%;
+    width: 93%;
+    align-self: flex-start;
 }
 
 
@@ -501,4 +523,90 @@ main .sidebar .submit-form button {
     font-size: 0.8vw;
     line-height: 3.5em;
     color: #FFF;
+}
+
+
+main .sidebar .submit-form button {
+    margin-top: 7%;
+    width: 100%;
+    background-image: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8vw;
+    line-height: 3.5em;
+    color: #FFF;
+}
+
+main .sidebar ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+main .sidebar .tags header {
+    margin-left: 0;
+    width: 100%;
+    align-items: flex-start;
+}
+
+main .sidebar .tags li {
+    display: inline-block;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 0.72vw;
+    padding: 2% 3.5%;
+    border: 0.2vw solid #eeeeee;
+    color: black;
+}
+
+main .sidebar  a:hover {
+    color: #0f0d0e;
+}
+
+main .sidebar .tags li:hover {
+    border-color: #b59f5b;
+    color: #0f0d0e;
+}
+
+main .sidebar .tags li:hover {
+    border-color: #b59f5b;
+    color: #0f0d0e;
+}
+
+
+main .sidebar .tags li:hover {
+    border-color: #b59f5b;
+    color: #0f0d0e;
+}
+
+main .sidebar .category a {
+    color: #000;
+}
+
+main .sidebar .category a:hover {
+    color: #b59f5b;
+}
+
+main .sidebar .category ul {
+    color: #000;
+    text-transform: capitalize;
+    flex-direction: column;
+    font-size: 0.8vw;
+    font-weight: bold;
+    line-height: 3em;
+}
+
+main .sidebar .category li {
+    border-bottom: 0.1vw solid #eeeeee;
+}
+
+main .sidebar .category li .counter{
+    color: #b59f5b;
 }
