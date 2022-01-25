@@ -17,6 +17,7 @@
 body {
     font-family: "Open Sans";
     font-size: 16px;
+    background-color: #FFF;
 }
 
 a {
@@ -24,6 +25,7 @@ a {
     color: black;
 }
 
+/*  header*/
 .main-header {
     position: relative;
     width: 100%;
@@ -48,7 +50,7 @@ a {
 }
 
 .center-wrapper {
-    margin: 0 13.8vw;
+    margin: 0 13.6vw;
     padding: 1.5vw 1vw;
     height: 100%;
     /*background-color: green;*/
@@ -120,10 +122,14 @@ a {
     /*background-color: blue;*/
 }
 
+
+/* main */
+
 main {
     background-color: #FFF;
 }
 
+/* main trends*/
 main .trends {
     display: flex;
     flex-direction: column;
@@ -284,6 +290,8 @@ main .trends .post h3 {
     padding: 0;
 }
 
+/* main content*/
+
 main > .center-wrapper {
     display: flex;
     background-color: #FFF;
@@ -294,6 +302,7 @@ main > .center-wrapper {
     justify-content: space-between;
 }
 
+/* main posts*/
 main > .center-wrapper > .posts {
     padding: 0;
     margin: 0;
@@ -308,6 +317,10 @@ main > .center-wrapper > section.posts .post {
     padding: 0;
     margin: 0;
     margin-bottom: 8%;
+}
+
+main > .center-wrapper > section.posts .post:last-child {
+    margin-bottom: 0;
 }
 
 main > .center-wrapper > section.posts .post-info {
@@ -365,7 +378,7 @@ main > .center-wrapper > section.posts .post-description {
     color: #000;
 }
 
-
+/* main aside*/
 main aside {
     margin: 0;
     padding: 0;
@@ -609,4 +622,205 @@ main .sidebar .category li {
 
 main .sidebar .category li .counter{
     color: #b59f5b;
+}
+
+/* main shop*/
+
+main .produce {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0; 
+    color: #000;
+    text-align: center;
+    background-color: #FFF;
+    text-transform: uppercase;
+}
+
+main .produce .items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main .produce .item {
+    display: flex;
+    flex-direction: column;
+    min-width: 20vw;
+    align-items: center;
+    margin-top: 2%;
+}
+
+main .produce .item img {
+    width: 18vw;
+    background-color: #eff6f1;
+}
+
+main .produce .item .detail {
+    margin-top: -2vw;
+    width: 18vw;
+    padding: 1vw;
+    border: 0.2vw solid #b59f5b;
+    font-family: "Open Sans";
+    text-align: start;
+    color: #000;
+    height: 13vw;
+}
+
+main .produce .item a {
+    color: #b59f5b;
+}
+
+main .produce .item a:hover {
+    text-decoration: underline;
+}
+
+main .produce .item .detail h3 {
+    display: inline-block;
+    margin-top: 10%;
+    margin-bottom: 0;
+    font-size: 1.2vw;
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+main .produce .item .detail p {
+    display: inline-block;
+    margin-top: 0;
+    font-size: 0.9vw;
+    line-height: 1.5em;
+    text-transform: none;
+}
+
+main .produce .item .detail .container {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    height: 2.7vw;
+}
+
+main .produce .item .detail .price-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 0.84vw;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+main .produce .item .detail .old-price {
+    text-decoration: line-through;
+}
+
+main .produce .item .detail .price {
+    font-size: 1.2vw;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+main .produce .item .button {
+    text-align: center;
+    background-image: none;
+    background-color: #b59f5b;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8vw;
+    line-height: 3.5em;
+    color: #FFF;
+    width: 8.4vw;
+}
+
+main .produce .item a.button:hover {
+    text-decoration: none;
+    background-color: black;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+main footer {
+    padding: 0;
+    margin: 0;
+}
+
+/*footer*/
+footer > .center-wrapper {
+    margin-top: -1vw;
+    margin-bottom: 0;
+}
+
+footer .social {
+    padding: 0;
+    margin: 0;
+    background-color: #f4f7f6;
+    height: 4.8vw;
+    width: 100%;
+    display: flex;
+    margin-bottom: 3.2vw;
+}
+
+footer .social .links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer .social .links li {
+    padding: 0;
+    margin: 0 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer .social .links li a {
+    padding: 0;
+    display: inline-block;
+    font-size: 0.8vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1.2vw;
+    height: 1.2vw;
+    font-size: 0.8vw;
+}
+
+
+footer .social .links li a.pinterest {
+    background-image: url("../svg/001-pinterest.svg");
+}
+
+footer .social .links li a.facebook {
+    background-image: url("../svg/002-facebook-logo.svg");
+}
+
+footer .social .links li a.tumblr {
+    background-image: url("../svg/003-tumblr.svg");
+}
+
+footer .social .links li a.twitter {
+    background-image: url("../svg/004-twitter.svg");
+}
+
+footer .social .links li a.instagram {
+    background-image: url("../svg/005-instagram.svg");
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: center;
+    height: 3vw;
+    font-family: "Open Sans";
+    color: #999999;
+    font-size: 0.72vw;
+    font-weight: bold;
+    line-height: 3.5em;
 }
