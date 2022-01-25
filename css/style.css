@@ -35,6 +35,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+    
 }
 
 .main-header::after {
@@ -50,10 +51,10 @@ a {
 }
 
 .center-wrapper {
-    margin: 0 13.6vw;
+    margin: 0 13.1vw;
     padding: 1.5vw 1vw;
-    /*background-color: green;*/
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -62,10 +63,9 @@ a {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
 }
 
-.main-header .title {
+.main-header div.title {
     margin: 6.5% auto;
     /*background-color: green;*/
     text-align: center;
@@ -87,7 +87,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /*background-color: indianred;*/
 }
 
 .main-header .navbar {
@@ -110,7 +109,7 @@ a {
     padding: 0;
     line-height: 2em;
     list-style: none;
-    margin-left: 5%;
+    margin-left: 5.5%;
     display: inline-block;
     text-transform: uppercase;
     font-size: 0.8vw;
@@ -139,8 +138,22 @@ main {
     background-color: #FFF;
 }
 
+main header.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+}
+
+main header.title h2 {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
 /* main trends*/
 main .trends {
+    margin: 0;
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -154,11 +167,11 @@ main .trends {
 main .trends .title {
     position: relative;
     padding: 0;
-    margin-top: 4%;
     margin-bottom: 2%;
 }
 
 .title h2 {
+    display: inline-block;
     margin: 0;
     padding: 0;
     line-height: 1.2em;
@@ -184,22 +197,29 @@ main .trends ul {
 }
 
 main .trends .posts {
-    height: 19.3vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 main .trends .post {
-    flex: 1 1 0;
+    width: 24.8%;
     position: relative;
-    min-width: 25%;
     z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-right: 0.2%;
+    margin-bottom: 0.3%;
+    height: 19.3vw;
 }
+
+main .trends .post:nth-child(4n) {
+    margin-right: 0;
+}
+
+
 
 main .trends .post ul a:hover {
     text-decoration: underline;
@@ -303,24 +323,33 @@ main .trends .post h3 {
 /* main content*/
 
 main > .center-wrapper {
-    display: flex;
     background-color: #FFF;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 3.8vw;
     margin-bottom: 3.8vw;
-    justify-content: space-between;
+    
 }
 
 /* main posts*/
-main > .center-wrapper > .posts {
+main > .center-wrapper > .container {
+    display: flex;
     padding: 0;
     margin: 0;
-    min-width: 65%;
-    margin-right: 11%;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
 }
 
-main > .center-wrapper > section.posts .post {
+/* main posts*/
+main > .center-wrapper > .container > .posts {
+    padding: 0;
+    margin: 0;
+    min-width: 64%;
+    margin-right: 12%;
+}
+
+main > .center-wrapper > .container > section.posts .post {
     display: flex;
     justify-content: space-between;
     height: 18vw;
@@ -329,17 +358,17 @@ main > .center-wrapper > section.posts .post {
     margin-bottom: 8%;
 }
 
-main > .center-wrapper > section.posts .post:last-child {
+main > .center-wrapper > .container >  section.posts .post:last-child {
     margin-bottom: 0;
 }
 
-main > .center-wrapper > section.posts .post-info {
+main > .center-wrapper > .container >  section.posts .post-info {
     padding: 0;
     margin: 0;
     margin-top: -0.5%;
 }
 
-main > .center-wrapper > section.posts .post-title {
+main > .center-wrapper > .container >  section.posts .post-title {
     padding: 0;
     margin: 0;
     font-size: 1.2vw;
@@ -351,15 +380,15 @@ main > .center-wrapper > section.posts .post-title {
     color: black;
 }
 
-main > .center-wrapper > section.posts .post-title a:hover {
+main > .center-wrapper > .container >  section.posts .post-title a:hover {
     color: #b59f5b;
 }
 
-main > .center-wrapper > section.posts .category a:hover {
+main > .center-wrapper > .container >  section.posts .category a:hover {
     text-decoration: underline;
 }
 
-main > .center-wrapper > section.posts img {
+main > .center-wrapper > .container >  section.posts img {
     margin-right: 3%;
     width: 46%;
     min-width: 46%;
@@ -379,7 +408,7 @@ main > .center-wrapper > section.posts img {
     font-weight: bold;
 }
 
-main > .center-wrapper > section.posts .post-description {
+main > .center-wrapper > .container >  section.posts .post-description {
     font-family: "Open Sans";
     padding: 0;
     margin-top: 10%;
@@ -396,25 +425,42 @@ main aside {
     flex-direction: column;
     align-items: center;
     min-width: 17vw;
-}
-
-.sidebar .new-posts {
-    width: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
 }
 
-main .sidebar .title {
+main .sidebar .flex-container {
+    margin: 0;
+    margin-top: 19%;
     width: 100%;
-    text-align: center;
-    margin-bottom: 10%;
-    margin-left: 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
-main .sidebar h2 {
+main .sidebar  .new-posts {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+main aside.sidebar .title {
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 10%;
+    display: flex;
+    display: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main aside.sidebar header h2 {
     font-size: 0.8vw;
     line-height: 1.5em;
 }
@@ -448,7 +494,7 @@ main .sidebar img {
     margin: 0;
     display: flex;
     height: auto;
-    margin-right: 7%;
+    margin-right: 5%;
     min-width: 30%;
 }
 
@@ -456,11 +502,6 @@ main .sidebar .post-info {
     margin: 0;
     padding: 0;
     margin-top: -5%;
-}
-
-main .sidebar .search-form {
-    display: flex;
-    width: 100%;
 }
 
 main .sidebar button {
@@ -472,7 +513,7 @@ main .sidebar button {
     margin-top: auto;
     background-color: #b59f5b;
     width: 20%;
-    height: 3.1vw;
+    height: 3.0vw;
     background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 40%;
@@ -484,10 +525,7 @@ main .sidebar button:hover {
 }
 
 main .sidebar input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
+    display: inline-block;
     margin: 0;
     width: 100%;
     font-size: 0.8vw;
@@ -499,13 +537,19 @@ main .sidebar input {
     padding-left: 6%;
 }
 
+main .sidebar form.search-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
 main .sidebar input:hover {
     outline: 0.02vw solid #b59f5b;
 }
 
 
 main .sidebar .submit-form {
-    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -514,38 +558,18 @@ main .sidebar .submit-form {
     width: 100%;
 }
 
-main .sidebar .flex-container {
-    margin: 0;
-    margin-top: 17%;
-    width: 100%;
-}
-
-main .sidebar .flex-container header {
-    margin-bottom: 8%;
-    margin-right: 10%;
-}
 
 
 main .sidebar .submit-form form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main .sidebar .submit-form input {
-    margin-top: 2%;
     width: 93%;
-    align-self: flex-start;
-}
-
-
-main .sidebar .submit-form button {
-    margin-top: 7%;
-    width: 100%;
-    background-image: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8vw;
-    line-height: 3.5em;
-    color: #FFF;
 }
 
 
@@ -571,9 +595,7 @@ main .sidebar ul {
 
 
 main .sidebar .tags header {
-    margin-left: 0;
     width: 100%;
-    align-items: flex-start;
 }
 
 main .sidebar .tags li {
@@ -584,7 +606,7 @@ main .sidebar .tags li {
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 0.72vw;
-    padding: 2% 3.5%;
+    padding: 2% 4%;
     border: 0.2vw solid #eeeeee;
     color: black;
 }
@@ -624,10 +646,17 @@ main .sidebar .category ul {
     font-size: 0.8vw;
     font-weight: bold;
     line-height: 3em;
+    width: 100%;
 }
 
 main .sidebar .category li {
     border-bottom: 0.1vw solid #eeeeee;
+    width: 100%;
+}
+
+main .sidebar .category header {
+    text-align: center;
+    margin: 0 auto;
 }
 
 main .sidebar .category li .counter{
@@ -653,6 +682,7 @@ main .produce .items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 main .produce .item {
@@ -677,6 +707,9 @@ main .produce .item .detail {
     text-align: start;
     color: #000;
     height: 13vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 main .produce .item a {
