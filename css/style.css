@@ -254,13 +254,14 @@ a {
     position: relative;
     z-index: 1;
     font-weight: bold;
-    padding: 8% 0;
+    padding: 8% 4%;
     padding-left: 8%;
 }
 
 .trends .post-header {
     padding: 0;
     margin: 0;
+    margin-top: 2%;
     width: 100%;
     color: #FFF;
     font-family: "Open Sans";
@@ -868,7 +869,7 @@ label {
     top: 14.2vw;
     left: calc(50% - 24.1vw / 2);
     padding-top: 3%;
-    width: 24.1vw;
+    width: 20vw;
     z-index: 10;
 }
 
@@ -949,3 +950,33 @@ select:focus {
 .submit {
     margin-top: 6%;
 }
+
+.close {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-indent: -9999px;
+    cursor: pointer;  
+
+    width: 1em;
+    height: 1em;
+    font-size: 2vw;
+    border: none;
+  
+    position: absolute;
+    top: -2.2vw;
+    right: -0.5vw;  
+    background-image: url("../svg/form-x.svg");
+    background-size: 1.2vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .close:before, .close:after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
