@@ -252,7 +252,7 @@ a {
     position: relative;
     z-index: 1;
     font-weight: bold;
-    padding: 6% 8%;
+    padding: 5% 5%;
     padding-bottom: 8%;
 }
 
@@ -300,12 +300,10 @@ a {
 /* main content*/
 
 body > .center-wrapper {
-    background-color: #FFF;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 3.6vw;
     margin-bottom: 3.6vw;
-    
 }
 
 .center-wrapper .container {
@@ -375,14 +373,16 @@ body > .center-wrapper {
 
 .publish-date {
     font-size: 0.7vw;
-    line-height: 3.3em;
     color: #989898;
     margin-right: 2%;
 }
 
+.publication {
+    display: flex;
+}
+
 .author {
     font-size: 0.7vw;
-    line-height: 3.3em;
     font-weight: bold;
 }
 
