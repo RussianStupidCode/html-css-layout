@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style-tablet.css">
+        <link rel="stylesheet" href="./css/fonts.css">
         <title>Блог о творчестве, спорте и образе жизни</title>
     </head>
 
@@ -17,7 +19,7 @@
                         </a>
 
                         <nav class="navbar">
-                            <ul>
+                            <ul class="">
                                 <li>
                                     <a href="#">Главная</a>
                                 </li>
@@ -42,6 +44,8 @@
                                     <a href="#">Контакты</a>
                                 </li>
                             </ul>
+
+                            <button class="menu hidden"></button>
                         </nav>
                     </div>
 
@@ -366,7 +370,7 @@
                             <input class="input" type="search" placeholder="Найти...">
                         </label>
 
-                        <button class="button search-button"></button>
+                        <button class="button search-button">text</button>
                     </form>
 
 
@@ -470,7 +474,10 @@
                 <article class="items">
                     <div class="item">
                         <picture>
-                            <img src="./images/shop-item-desk1.jpg" alt="shop-item2">
+                            <source media="(max-width: 449px)" srcset="./images/shop-item-mobile1.jpg">
+                            <source media="(max-width: 1199px)" srcset="./images/shop-item-tablet1.jpg">
+                            <source media="(min-width: 1200px)" srcset="./images/shop-item-desk1.jpg">
+                            <img src="./images/shop-item-desk1.jpg" alt="shop-item1">
                         </picture>
 
                         <div class="detail">
@@ -496,6 +503,9 @@
 
                     <div class="item">
                         <picture>
+                            <source media="(max-width: 449px)" srcset="./images/shop-item-mobile2.jpg">
+                            <source media="(max-width: 1199px)" srcset="./images/shop-item-tablet2.jpg">
+                            <source media="(min-width: 1200px)" srcset="./images/shop-item-desk2.jpg">
                             <img src="./images/shop-item-desk2.jpg" alt="shop-item2">
                         </picture>
 
@@ -522,6 +532,9 @@
 
                     <div class="item">
                         <picture>
+                            <source media="(max-width: 449px)" srcset="./images/shop-item-mobile3.jpg">
+                            <source media="(max-width: 1199px)" srcset="./images/shop-item-tablet3.jpg">
+                            <source media="(min-width: 1200px)" srcset="./images/shop-item-desk3.jpg">
                             <img src="./images/shop-item-desk3.jpg" alt="shop-item3">
                         </picture>
 

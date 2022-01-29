@@ -1,0 +1,266 @@
+@media (max-width: 1119px) {
+    body {
+        font-size: 2.3vw;
+    }
+
+    /* page header */
+
+    .center-wrapper {
+        margin: 0 4.7vw;
+        margin-bottom: 6vw;
+        padding: 0;
+    }
+
+    .main-header {
+        background-image: url("../images/banner-bg-tablet.jpg");
+        background-position: center;
+    }
+
+    .topic-container {
+        padding-top: 5.3vw;
+    }
+
+    .main-header .topic {
+        margin-top: 11vw;
+        width: 80vw;
+        padding-bottom: 15vw;
+    }
+
+    .main-header .topic h1{
+        font-size: 5.2vw;
+        line-height: 1.4em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar li {
+        font-size: 1.6vw;
+        margin-left: 0;
+        margin-right: 13.5%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar .menu {
+        display: inline-block;
+        border: 0;
+        color: #fff;
+        width: 3vw;
+        height: 3vw;
+        background-color: #fff;
+    }
+
+
+    .logo {
+        width: 19.7vw;
+    }
+
+
+    /* trends */
+    .title h2 {
+        font-size: 2.3vw;
+    }
+
+    .title h2::after {
+        width: 8.6vw;
+        height: 0.3vw;
+    }
+
+    .trends .post {
+        width: 49.8%;
+        min-height: 32.5vw;
+        margin-top: 0.3%;
+        background-position: bottom center;
+    }
+
+    .trends .post-info {
+        border: 0.4vw solid #918156;
+    }
+
+    .trends .post-header {
+        font-size: 2.2vw;
+    }
+
+    .trends .post:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .category {
+        font-size: 1.8vw;
+    }
+
+    /* main content*/
+    body > .center-wrapper {
+        margin-top: 6vw;
+        margin-bottom: 6vw;
+    }
+
+    .main-posts {
+        width: 50vw;
+    }
+
+    .main-posts .post {
+        flex-direction: column;
+    }
+
+    .main-posts img {
+        margin: 0;
+        margin-bottom: 3%;
+        width: 49.5vw;
+        height: 39vw;
+        background-color: #eff6f1;
+    }
+
+    .main-posts .post-title {
+        font-size: 2.2vw;
+    }
+
+    .publication {
+        font-size: 1.6vw;
+    }
+
+    .main-posts .post-description {
+        padding-right: 1%;
+        margin-top: 6%;
+        font-size: 1.9vw;
+        border-bottom: 0.4vw solid #eeeeee;
+    }
+
+    /* aside*/
+    .sidebar {
+        width: 35.3vw;
+    }
+
+    .sidebar .post-image {
+        max-width: 9.1vw;
+        max-height: 9.1vw;
+        margin-right: 7%;
+    }
+
+    .sidebar .title {
+        margin-bottom: 8%;
+    }
+
+    .sidebar h3 {
+        font-size: 1.82vw;
+    }
+
+    .sidebar header h2 { 
+        font-size: 1.82vw;
+    }
+
+    .sidebar .post {
+        font-size: 1.6vw;
+    }
+
+    .sidebar .flex-container:first-child {
+        margin-top: 0;
+    }
+
+    .sidebar .flex-container {
+        margin-top: 15%;
+    }
+
+    .button {
+        font-size: 1.7vw;
+    }
+
+    .input {
+        font-size: 1.7vw;
+    }
+
+    .sidebar .tags li {
+        font-size: 1.6vw;
+    }
+
+    .sidebar .category li {
+        border-bottom: 0.3vw solid #eeeeee;
+        
+    }
+
+    .sidebar .category ul {
+        font-size: 1.8vw;
+    }
+
+    .sidebar .counter {
+        font-size: 1.6vw;
+    }
+
+    /* main shop*/
+
+    .produce .item {
+        margin-top: 2.5%;
+    }
+
+    .produce .title {
+        margin-bottom: 0;
+    }
+
+    .produce .detail {
+        margin-top: -13%;
+        border: 0.4vw solid #b59f5b;
+        width: 39vw;
+        padding: 2vw;
+        height: 29vw;
+    }
+
+    .produce .detail h3 {
+        font-size: 2.2vw;
+    }
+
+    .produce .item img {
+        width: 39vw;
+        background-color: #eff6f1;
+    }
+
+    .produce .detail p {
+        font-size: 2vw;
+    }
+
+    .produce .item .button {
+        width: 18.3vw;
+    }
+
+    .produce .detail .price-block {
+        font-size: 1.8vw;
+    }
+
+    .produce .price {
+        font-size: 2.6vw;
+    }
+
+    /*footer*/
+    footer > .center-wrapper {
+        padding-bottom: 4vw;
+    }
+    
+    footer .social {
+        margin-bottom: 5vw;
+    }
+
+
+    footer .links {
+        margin: 3.5%;
+    }
+
+    footer li {
+        margin-right: 3vw;
+    }
+
+    footer .copyright {
+        font-size: 1.6vw;
+    }
+
+    footer .social a {
+        padding: 0;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 2.7vw;
+        height: 2.7vw;
+    }
+}
