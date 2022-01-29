@@ -18,6 +18,8 @@ body {
     font-family: "Open Sans";
     font-size: 16px;
     background-color: #FFF;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -25,11 +27,15 @@ a {
     color: black;
 }
 
+.center-wrapper {
+    margin: 0 13vw;
+    padding: 1.5vw 2vw;
+}
+
 /*  header*/
 .main-header {
     position: relative;
     width: 100%;
-    height: 27.1vw;
     background-color: gray;
     background-image: url("../images/banner-bg.jpg");
     background-repeat: no-repeat;
@@ -50,52 +56,37 @@ a {
     opacity: 0.6;
 }
 
-.center-wrapper {
-    margin: 0 13.1vw;
-    padding: 1.5vw 1vw;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.main-header .center-wrapper > .container{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.main-header div.title {
-    margin: 6.5% auto;
+.topic {
+    margin: 0 auto;
+    margin-top: 8.5%;
     /*background-color: green;*/
     text-align: center;
     width: 41.5vw;
 }
 
-.main-header h1 {
+.topic h1 {
     color: #FFF;
     font-weight: bold;
     font-size: 2.7vw;
     line-height: 1.67em;
     text-transform: uppercase;
+    padding-bottom: 10%;
 }
 
-
-.main-header .panel {
+.panel {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.main-header .navbar {
-    width: 50%;
+.navbar {
     display: inline-block;
     /*background-color: blue;*/
 }
 
-.main-header .navbar ul {
+.navbar ul {
     display: flex;
     margin: 0;
     padding: 0;
@@ -104,26 +95,29 @@ a {
     list-style: none;
 }
 
-.main-header .navbar li {
+.navbar li {
     margin: 0;
     padding: 0;
-    line-height: 2em;
     list-style: none;
-    margin-left: 5.5%;
+    margin-left: 10.5%;
     display: inline-block;
     text-transform: uppercase;
     font-size: 0.8vw;
 }
 
-.main-header .navbar a {
+.navbar li:first-child {
+    margin-left: 0;
+}
+
+.navbar a {
     color: #FFF;
 }
 
-.main-header .navbar a:hover {
+.navbar a:hover {
     text-decoration: underline;
 }
 
-.main-header .logo {
+.logo {
     padding: 0;
     margin: 0;
     display: inline-block;
@@ -131,27 +125,8 @@ a {
     /*background-color: blue;*/
 }
 
-
-/* main */
-
-main {
-    background-color: #FFF;
-}
-
-main header.title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;   
-}
-
-main header.title h2 {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-
-/* main trends*/
-main .trends {
+/* trends*/
+.trends {
     margin: 0;
     margin-top: 4%;
     display: flex;
@@ -164,7 +139,7 @@ main .trends {
     text-transform: uppercase;
 }
 
-main .trends .title {
+.trends .title {
     position: relative;
     padding: 0;
     margin-bottom: 2%;
@@ -191,53 +166,51 @@ main .trends .title {
     background-color: #e1d9bd;
 }
 
-main .trends ul {
+.trends ul {
     display: flex;
     list-style: none;
 }
 
-main .trends .posts {
+.trends .posts {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-main .trends .post {
+.trends .post {
     width: 24.8%;
     position: relative;
     z-index: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: 0.2%;
-    margin-bottom: 0.2%;
-    height: 19.3vw;
+    justify-content: flex-end;
+    margin-right: 0.15%;
+    margin-bottom: 0.15%;
+    min-height: 19.3vw;
 }
 
-main .trends .post:nth-child(4n) {
+.trends .post:nth-child(4n) {
     margin-right: 0;
 }
 
-
-
-main .trends .post ul a:hover {
+.trends a:hover {
     text-decoration: underline;
 }
 
-main .trends .post h3 a {
+.trends a {
     color: #FFF;
 }
 
-main .trends .post h3 a:hover {
+.trends h3 a:hover {
     color: #b59f5b;
 }
 
-main .trends .post:last-child {
+.trends .post:last-child {
     margin-right: 0;
 }
 
-main .trends .post::after {
+.trends .post::after {
     content: "";
     position: absolute;
     top: 0;
@@ -249,46 +222,46 @@ main .trends .post::after {
     opacity: 0.6;
 }
 
-main .trends .post:nth-child(1) {
+.trends .post-1 {
     background-image: url("../images/trend1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main .trends .post:nth-child(2) {
+.trends .post-2 {
     background-image: url("../images/trend2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main .trends .post:nth-child(3) {
+.trends .post-3 {
     background-image: url("../images/trend3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main .trends .post:nth-child(4) {
+.trends .post-4 {
     background-image: url("../images/trend4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-main .trends .post .info {
+.trends .post-info {
     border: 0.2vw solid #918156;
     margin: 5% 5%;
-    margin-top: auto;
     position: relative;
     z-index: 1;
     font-weight: bold;
-    padding: 5% 5%;
+    padding: 6% 8%;
     padding-bottom: 8%;
 }
 
-main .trends .post h3 {
+.trends .post-header {
     padding: 0;
     margin: 0;
     width: 100%;
     color: #FFF;
+    font-family: "Open Sans";
     font-size: 1.2vw;
     line-height: 1.2em;
     text-align: start;
@@ -304,7 +277,6 @@ main .trends .post h3 {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
-
 }
 
 .category a {
@@ -315,24 +287,28 @@ main .trends .post h3 {
 }
 
 .category li {
+    display: inline-block;
     margin: 0;
     margin-right: 5%;
     padding: 0;
 }
 
+.category li:last-child {
+    margin-right: 0;
+}
+
 /* main content*/
 
-main > .center-wrapper {
+body > .center-wrapper {
     background-color: #FFF;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 3.8vw;
-    margin-bottom: 3.8vw;
+    margin-top: 3.6vw;
+    margin-bottom: 3.6vw;
     
 }
 
-/* main posts*/
-main > .center-wrapper > .container {
+.center-wrapper .container {
     display: flex;
     padding: 0;
     margin: 0;
@@ -341,58 +317,59 @@ main > .center-wrapper > .container {
     width: 100%;
 }
 
-/* main posts*/
-main > .center-wrapper > .container > .posts {
+.post-info {
     padding: 0;
     margin: 0;
-    min-width: 63%;
-    max-width: 63%;
-    margin-right: 13%;
 }
 
-main > .center-wrapper > .container > section.posts .post {
+/*posts*/
+.main-posts {
+    padding: 0;
+    margin: 0;
+    width: 46.5vw;
+}
+
+.main-posts .post {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    height: 18vw;
     padding: 0;
     margin: 0;
     margin-bottom: 8%;
 }
 
-main > .center-wrapper > .container >  section.posts .post:last-child {
+.main-posts .post:last-child {
     margin-bottom: 0;
 }
 
-main > .center-wrapper > .container >  section.posts .post-info {
-    padding: 0;
-    margin: 0;
-    margin-top: -0.5%;
-}
-
-main > .center-wrapper > .container >  section.posts .post-title {
+.main-posts .post-title {
     padding: 0;
     margin: 0;
     font-size: 1.2vw;
     line-height: 1.2em;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 5%;
-    margin-top: 1%;
     color: black;
+    margin-bottom: 8%;
 }
 
-main > .center-wrapper > .container >  section.posts .post-title a:hover {
+.main-posts .post-title a:hover {
     color: #b59f5b;
 }
 
-main > .center-wrapper > .container >  section.posts .category a:hover {
+.main-posts .category {
+    line-height: 1em;
+    margin-bottom: 2%;
+}
+
+.main-posts .category a:hover {
     text-decoration: underline;
 }
 
-main > .center-wrapper > .container >  section.posts img {
+.main-posts img {
     margin-right: 3%;
-    width: 46%;
-    min-width: 46%;
+    width: 24vw;
+    height: 18vw;
     background-color: #eff6f1;
 }
 
@@ -409,7 +386,7 @@ main > .center-wrapper > .container >  section.posts img {
     font-weight: bold;
 }
 
-main > .center-wrapper > .container >  section.posts .post-description {
+.main-posts .post-description {
     font-family: "Open Sans";
     padding: 0;
     margin-top: 10%;
@@ -418,23 +395,16 @@ main > .center-wrapper > .container >  section.posts .post-description {
     color: #000;
 }
 
-/* main aside*/
-main aside {
+/* aside*/
+.sidebar {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    width: 17vw;
+    width: 16.2vw;
 }
 
-main .sidebar .flex-container {
+.sidebar .flex-container {
     margin: 0;
-    margin-top: 19%;
+    margin-top: 20%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -442,31 +412,30 @@ main .sidebar .flex-container {
     flex-direction: column;
 }
 
-main .sidebar  .new-posts {
+.sidebar .new-posts {
     width: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 0;
 }
 
-main aside.sidebar .title {
+.sidebar .title {
     padding: 0;
     margin-top: 0;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
     display: flex;
-    display: column;
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-main aside.sidebar header h2 {
+.sidebar header h2 {
     font-size: 0.8vw;
     line-height: 1.5em;
 }
 
-main .sidebar h3 {
+.sidebar h3 {
     margin: 0;
     bottom: 0;
     font-size: 0.84vw;
@@ -477,43 +446,35 @@ main .sidebar h3 {
 }
 
 
-main .sidebar .publish-date {
+.sidebar .publish-date {
     margin: 0;
     padding: 0;
 }
 
-main .sidebar .post {
+.sidebar .post {
     margin: 0;
     padding: 0;
     display: flex;
     position: relative;
-    height: 4.3vw;
     font-size: 0.8vw;
     margin-bottom: 7%;
 }
 
-main .sidebar img {
+.sidebar .post-image {
+    background-color: #eff6f1;
     margin: 0;
-    display: flex;
-    height: auto;
+    max-width: 4.7vw;
+    max-height: 4.2vw;
     margin-right: 7%;
 }
 
-main .sidebar .post-info {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-main .sidebar .post-info span {
+.sidebar .post-info span {
     display: inline-block;
     line-height: 1em;
     margin-bottom: 2%;
 }
 
-main .sidebar button {
+.sidebar button {
     font-family: "Open Sans";
     padding: 0;
     border: none;
@@ -529,11 +490,11 @@ main .sidebar button {
     background-position: left 50% center;
 }
 
-main .sidebar button:hover {
+.sidebar button:hover {
     background-color: black;
 }
 
-main .sidebar input {
+.sidebar input {
     display: inline-block;
     margin: 0;
     width: 100%;
@@ -546,54 +507,33 @@ main .sidebar input {
     padding-left: 6%;
 }
 
-main .sidebar form.search-form {
+.sidebar .search-form {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-
-main .sidebar input:hover {
+.sidebar input:hover {
     outline: 0.02vw solid #b59f5b;
 }
 
 
-main .sidebar .submit-form {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-
-main .sidebar .submit-form form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-main .sidebar .submit-form input {
+.sidebar .submit-form input {
     width: 93%;
 }
 
 
-main .sidebar .submit-form button {
+.sidebar .submit-form button {
     margin-top: 7%;
     width: 100%;
     background-image: none;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8vw;
-    line-height: 3.5em;
     color: #FFF;
 }
 
-main .sidebar ul {
+.sidebar ul {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -602,12 +542,7 @@ main .sidebar ul {
     flex-wrap: wrap;
 }
 
-
-main .sidebar .tags header {
-    width: 100%;
-}
-
-main .sidebar .tags li {
+.sidebar .tags li {
     display: inline-block;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -620,61 +555,44 @@ main .sidebar .tags li {
     color: black;
 }
 
-main .sidebar  a:hover {
+.sidebar  a:hover {
     color: #0f0d0e;
 }
 
-main .sidebar .tags li:hover {
-    border-color: #b59f5b;
-    color: #0f0d0e;
-}
-
-main .sidebar .tags li:hover {
-    border-color: #b59f5b;
-    color: #0f0d0e;
-}
-
-
-main .sidebar .tags li:hover {
-    border-color: #b59f5b;
-    color: #0f0d0e;
-}
-
-main .sidebar .category a {
+.sidebar .category a {
     color: #000;
 }
 
-main .sidebar .category a:hover {
+.sidebar .category a:hover {
     color: #b59f5b;
 }
 
-main .sidebar .category ul {
+.sidebar .category ul {
     color: #000;
     text-transform: capitalize;
     flex-direction: column;
-    font-size: 0.8vw;
+    font-size: 0.85vw;
     font-weight: bold;
-    line-height: 3em;
     width: 100%;
 }
 
-main .sidebar .category li {
+.sidebar .category li {
     border-bottom: 0.1vw solid #eeeeee;
-    width: 100%;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
 }
 
-main .sidebar .category header {
-    text-align: center;
-    margin: 0 auto;
+.sidebar .counter {
+    vertical-align: super;
+    font-size: 0.8em;
 }
 
-main .sidebar .category li .counter{
+.sidebar .category li .counter{
     color: #b59f5b;
 }
 
 /* main shop*/
-
-main .produce {
+.produce {
     display: flex;
     min-width: 100%;
     flex-direction: column;
@@ -686,7 +604,7 @@ main .produce {
     text-transform: uppercase;
 }
 
-main .produce .items {
+.produce .items {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -694,19 +612,19 @@ main .produce .items {
     
 }
 
-main .produce .item {
+.produce .item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2%;
 }
 
-main .produce .item img {
+.produce .item img {
     width: 18vw;
     background-color: #eff6f1;
 }
 
-main .produce .item .detail {
+.produce .item .detail {
     margin-top: -2vw;
     width: 18vw;
     padding: 1vw;
@@ -720,15 +638,15 @@ main .produce .item .detail {
     justify-content: flex-start;
 }
 
-main .produce .item a {
+.produce .item a {
     color: #b59f5b;
 }
 
-main .produce .item a:hover {
+.produce .item a:hover {
     text-decoration: underline;
 }
 
-main .produce .item .detail h3 {
+.produce .item .detail h3 {
     display: inline-block;
     margin-top: 10%;
     margin-bottom: 0;
@@ -737,7 +655,7 @@ main .produce .item .detail h3 {
     font-weight: bold;
 }
 
-main .produce .item .detail p {
+.produce .item .detail p {
     display: inline-block;
     margin-top: 0;
     font-size: 0.9vw;
@@ -745,18 +663,18 @@ main .produce .item .detail p {
     text-transform: none;
 }
 
-main .produce .item span{
+.produce .item span {
     display: inline-block;
 }
 
-main .produce .item .detail .container {
+.produce .item .detail .container {
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
     height: 2.7vw;
 }
 
-main .produce .item .detail .price-block {
+.produce .item .detail .price-block {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -765,17 +683,17 @@ main .produce .item .detail .price-block {
     font-weight: bold;
 }
 
-main .produce .item .detail .old-price {
+.produce .item .detail .old-price {
     text-decoration: line-through;
 }
 
-main .produce .item .detail .price {
+.produce .item .detail .price {
     font-size: 1.2vw;
     line-height: 1em;
     font-weight: bold;
 }
 
-main .produce .item .button {
+.produce .item .button {
     text-align: center;
     background-image: none;
     background-color: #b59f5b;
@@ -787,7 +705,7 @@ main .produce .item .button {
     width: 8.4vw;
 }
 
-main .produce .item a.button:hover {
+.produce .item a.button:hover {
     text-decoration: none;
     background-color: black;
 }
@@ -796,44 +714,50 @@ main .produce .item a.button:hover {
     visibility: hidden;
 }
 
-main footer {
+
+/*footer*/
+footer {
     padding: 0;
     margin: 0;
 }
 
-/*footer*/
 footer > .center-wrapper {
-    margin-top: -1vw;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 2vw;
 }
 
 footer .social {
     padding: 0;
     margin: 0;
     background-color: #f4f7f6;
-    height: 4.8vw;
     width: 100%;
     display: flex;
     margin-bottom: 3.2vw;
 }
 
-footer .social .links {
+footer .links {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 2.5%;
     padding: 0;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-footer .social .links li {
+footer li {
     padding: 0;
-    margin: 0 0.8vw;
+    margin: 0;
+    margin-right: 1.6vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+footer li:last-child {
+    margin-right: 0;
 }
 
 footer .social .links li a {
@@ -872,10 +796,8 @@ footer .social .links li a.instagram {
 footer .copyright {
     display: flex;
     justify-content: center;
-    height: 2.5vw;
     font-family: "Open Sans";
     color: #999999;
     font-size: 0.72vw;
     font-weight: bold;
-    line-height: 3.5em;
 }
