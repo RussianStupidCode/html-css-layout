@@ -647,7 +647,7 @@ body > .center-wrapper {
     font-family: "Open Sans";
     text-align: start;
     color: #000;
-    height: 13vw;
+    min-height: 13vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -864,7 +864,7 @@ label {
 
     margin: 0;
     width: 100%;
-    font-size: 0.8vw;
+    font-size: inherit;
     line-height: 3.5em;
     background-color: #f4f7f6;
     border: none;
@@ -875,7 +875,7 @@ label {
     background-image: url("../svg/form-arrows.svg");
     background-size: 0.6vw;
     background-repeat: no-repeat;
-    background-position: right 5px center;
+    background-position: right 4% center;
 }
 
 select:hover {

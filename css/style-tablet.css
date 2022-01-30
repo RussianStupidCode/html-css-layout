@@ -69,27 +69,8 @@
         height: 0.3vw;
     }
 
-    .trends .post {
-        width: 49.8%;
-        min-height: 32.5vw;
-        margin-top: 0.3%;
-        background-position: bottom center;
-    }
-
     .trends .post-info {
         border: 0.4vw solid #918156;
-    }
-
-    .trends .post-header {
-        font-size: 2.2vw;
-    }
-
-    .trends .post:nth-child(2n) {
-        margin-right: 0;
-    }
-
-    .category {
-        font-size: 1.8vw;
     }
 
     /* main content*/
@@ -262,5 +243,139 @@
         background-repeat: no-repeat;
         width: 2.7vw;
         height: 2.7vw;
+    }
+
+
+    /* popup */
+
+    .popup {
+        font-size: 1.7vw;
+    }
+
+    .popup .feedback {
+        width: 48vw;
+        top: 30.2vw;
+        left: calc(50% - 52vw / 2);
+        padding-top: 8%;
+    }
+
+    .popup .input-field {
+        margin-top: 5%;
+        margin-bottom: 4%;
+    }
+
+    .popup select {
+        background-size: 1.2vw;
+        background-position: right 3% center;
+    }
+    
+    .radio-text::before {
+        width: 3vw;
+        height: 3vw;
+        background-size: 3vw;
+    }
+
+    .text-area {
+        min-height: 16.8vw;
+    }
+
+    .submit {
+        margin-top: 1%;
+        margin-bottom: 6%;
+    }
+
+    .close {
+        width: 2em;
+        height: 2em;
+        font-size: 3vw;
+
+        top: -6.2vw;
+        right: -1vw;  
+        background-size: 4vw;
+    }
+}
+
+/* device adaptive*/
+@media (max-width: 1119px) and (orientation:portrait) {
+    .trends .post {
+        width: 49.8%;
+        min-height: 32.5vw;
+        margin-top: 0.3%;
+        background-position: bottom center;
+    }
+     
+    .trends .post-header {
+        font-size: 2.2vw;
+    }
+
+    .trends .post:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .category {
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 1119px) and (orientation:landscape) {
+    .trends .post {
+        width: 24.8%;
+        min-height: 32.5vh;
+    }
+
+    .trends .post-header {
+        font-size: 2.2vh;
+    }
+
+    .trends .post:nth-child(4n) {
+        margin-right: 0;
+    }
+
+    .category {
+        font-size: 1.8vh;
+    }
+}
+
+
+@media (max-width: 640px) and (orientation:portrait) {
+    .trends .post {
+        width: 99.6%;
+        min-height: 32.5vw;
+        margin-top: 0.3%;
+        background-position: bottom center;
+    }
+     
+    .trends .post-header {
+        font-size: 2.2vw;
+    }
+
+    .trends .post:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .category {
+        font-size: 1.8vw;
+    }
+}
+
+
+@media (max-width: 640px) and (orientation:landscape) {
+    .trends .post {
+        width: 49.8%;
+        min-height: 32.5vh;
+        margin-top: 0.3%;
+        background-position: bottom center;
+    }
+     
+    .trends .post-header {
+        font-size: 2.2vh;
+    }
+
+    .trends .post:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .category {
+        font-size: 1.8vh;
     }
 }
