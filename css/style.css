@@ -842,17 +842,16 @@ footer .copyright {
     margin-bottom: 2%;
 }
 
-body::after {
-    display: none;
+.popup::after {
     content:"";
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    top: -50vh;
+    right: -50vw;
+    left: -50vw;
+    bottom: -50vh;
     background-color: #000;
     opacity: 0.5;
-    z-index: 1;
+    z-index: 2;
 }
 
 .popup .feedback {
