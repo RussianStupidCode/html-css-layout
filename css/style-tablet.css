@@ -40,6 +40,10 @@
         margin-right: 15%;
     }
 
+    .navbar-list {
+        visibility: hidden;
+    }
+
     .navbar-item:last-child {
         margin-right: 8%;
     }
